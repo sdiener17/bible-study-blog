@@ -63,22 +63,18 @@ const SideWrapper = styled.nav`
     font-size: 20px;
     //transition: var(--mainTransition);
     text-decoration: none;
+    color: var(--softBlack);
     //width: 80%;
   }
   .sidebar-link:hover {
-    border-radius: 10px;
-    background: linear-gradient(to bottom right, var(--secondarySiteColor), var(--primarySiteColor) , var(--siteColor4));
-    color: var(--lightGrey);
     //padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     text-decoration: none;
+    border-bottom: 2px solid var(--softBlack);
   }
   .lit {
-    border-radius: 10px;
-    color: var(--lightGrey);
-    background: linear-gradient(to bottom right, var(--secondarySiteColor), var(--primarySiteColor) , var(--siteColor4));
+    border-bottom: 2px solid var(--softBlack);
   }
   .unlit {
-    color: var(--lightGrey);
     background: none;
   }
 `;

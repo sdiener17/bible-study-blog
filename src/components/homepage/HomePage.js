@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
+import BlogPic1 from "../../images/blogPic1.jpg";
 
 
 
@@ -9,9 +10,11 @@ export default function HomePage(){
       }, [])
     return (
         <PageWrapper>
-            <div className="first-row">
-                <p>Welcome to the Bible Study Blog!
-                </p>
+            <div className="blog-cols">
+                <div className="singleBlog">
+                    <img className="sqr" src={BlogPic1}/>
+                    <div>This is a blog post that you should click on</div>
+                </div>
             </div>
             <div className="marginBottom"/>     
         </PageWrapper>
@@ -22,28 +25,17 @@ export default function HomePage(){
 const PageWrapper = styled.div`
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:left;
     flex-direction:column;
     width:100%;
     padding-top:10px;
     padding-bottom:60px;
-    //margin-left:40px;
-    .top-column{
+    .blog-cols{
         display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-    }
-    .first-row{
-        display:flex;
-        flex-direction:row;
+        flex-direction:column;
         margin-left:20px;
         margin-right:10px;
         font-size:1.5rem;
-    }
-    .word-cloud{
-        max-width:1200px;
-        max-height:400px;
     }
     .marginTop{
         margin-bottom:40px;
@@ -51,11 +43,55 @@ const PageWrapper = styled.div`
     .marginBottom{
         margin-bottom:var(--marginBottom);
     }
-    p{
+    .singleBlog {
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+        margin-right: 10px;
+    }
+    /* p{
         font-family: 'Times New Roman', Times, serif;
         padding: 10px;
         background-color:var(--cardGrey);
         border-radius: 10px;
         margin-bottom:20px;
-    }
+    } */
+
+    .sqr {
+        --size: 400px;
+    
+        height: var(--size);
+        width: var(--size);
+        /* border-radius: calc(var(--size) * 0.15); */
+        background: {
+            image: var(--img);
+            size: cover;
+            repeat: no-repeat;
+        }
+        position: relative;
+        box-shadow: 2.5px 2.5px 2.5px var(--darkGrey);
+    
+        &::after {
+        content: "";
+        position: absolute;
+        width: calc(var(--size) * 0.8);
+        height: 100%;
+        top: calc(var(--size) * 0.05);
+        left: 50%;
+        transform: translateX(-50%);
+        background: {
+            image: var(--img);
+            size: cover;
+            repeat: no-repeat;
+        }
+        z-index: -1;
+        filter: blur(20px) opacity(70%);
+        }
+  }  
+  .sqr:hover{
+    box-shadow: 5px 5px 5px var(--darkGrey);
+  }
+  .sqr {
+    margin: 10px;
+  }
 `;

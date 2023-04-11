@@ -25,8 +25,8 @@ const PageWrapper = styled.header`
   position: sticky;
   top: 0;
   padding: 1rem 1.5rem;
-  background: linear-gradient(to bottom right, var(--primarySiteColor) , var(--darkSiteColor));
-  border-bottom: 5px solid var(--mediumGrey);
+  /* background: linear-gradient(to bottom right, var(--primarySiteColor) , var(--darkSiteColor)); */
+  border-top: 5px solid var(--primaryAccentColor);
   z-index: 999;
   /* width: 100%; */
   margin: 0;
@@ -41,7 +41,7 @@ const PageWrapper = styled.header`
   }
   .headerTitle {
     font-size: 2.5rem;
-    color: var(--lightGrey);
+    color: var(--softBlack);
     text-transform: uppercase;
     letter-spacing: 0.12rem;
   }
@@ -50,7 +50,7 @@ const PageWrapper = styled.header`
     align-items: left;
     flex-direction: column;
     font-size: 1rem;
-    color: var(--lightGrey);
+    color: var(--softBlack);
   }
   .logo {
     height: 50%;

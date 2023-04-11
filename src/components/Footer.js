@@ -29,10 +29,10 @@ const FootWrapper = styled.div`
     width: 100%;
     max-height: 80px;
     //padding: 1rem 1.5rem;
-    background: linear-gradient(to top right, var(--primarySiteColor) , var(--darkSiteColor));
-    border-bottom: 5px solid var(--mediumGrey);
+    background: var(--primaryAccentColor);
+    border-bottom: 5px solid var(--softBlack);
     z-index: 999;
-    color: var(--lightGrey);
+    color: var(--softBlack);
   }
   .text-1{
     margin-right:10px;

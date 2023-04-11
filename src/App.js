@@ -27,7 +27,7 @@ export default function App() {
     <PageWrapper>
 
         <Header />
-          <div >
+          <div className="contentContainer">
             {/* <NavBar /> */}
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <Routes>
