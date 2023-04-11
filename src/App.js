@@ -50,7 +50,7 @@ export default function App() {
   );
 }
 
-const PageWrapper = styled.nav`
+const PageWrapper = styled.div`
   .separaterBottomFooter {
     margin-bottom: 60px;
   }
